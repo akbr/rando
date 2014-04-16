@@ -151,17 +151,7 @@
 
   // CommonJS module
   if (typeof exports !== 'undefined') {
-      if (typeof module !== 'undefined' && module.exports) {
-          exports = module.exports = Rando;
-      }
-      exports.Rando = Rando;
-  }
-
-  // Register as a named AMD module
-  if (typeof define === 'function' && define.amd) {
-      define([], function () {
-          return Rando;
-      });
+    module.exports = Rando;
   }
 
   // If there is a window object, that at least has a document property,
